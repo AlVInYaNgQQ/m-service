@@ -1,7 +1,7 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { TestMicroserviceResourceService } from './test-microservice-resource.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { TestMicroserviceResourceService } from "./test-microservice-resource.service";
 
-describe('TestMicroserviceResourceService', () => {
+describe("TestMicroserviceResourceService", () => {
   let service: TestMicroserviceResourceService;
 
   beforeEach(async () => {
@@ -9,10 +9,12 @@ describe('TestMicroserviceResourceService', () => {
       providers: [TestMicroserviceResourceService],
     }).compile();
 
-    service = module.get<TestMicroserviceResourceService>(TestMicroserviceResourceService);
+    service = module.get<TestMicroserviceResourceService>(
+      TestMicroserviceResourceService,
+    );
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(service).toBeDefined();
   });
 });

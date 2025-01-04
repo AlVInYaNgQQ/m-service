@@ -2,9 +2,9 @@ import { Column, DataType, Model, Table } from "sequelize-typescript";
 import { CommodityAttribute } from "../attributes";
 
 @Table({
-  tableName: 'commodity',
-  createdAt: 'create_time',
-  updatedAt: 'modify_time',
+  tableName: "commodity",
+  createdAt: "create_time",
+  updatedAt: "modify_time",
 })
 export class CommodityModel extends Model<CommodityAttribute> {
   @Column({
@@ -12,7 +12,7 @@ export class CommodityModel extends Model<CommodityAttribute> {
     unique: true,
     type: DataType.UUIDV4,
   })
-  id: string
+  id: string;
 
   @Column({
     primaryKey: true,

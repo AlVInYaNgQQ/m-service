@@ -18,8 +18,13 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./apps/m-service/test/jest-e2e.json",
-    "database-migration-gen": "sequelize-cli migration:generate --migrations-path ./libs/database/src/migrations/ --name schema",
-    "database-migration": "yarn sequelize-cli db:migrate --config ./libs/database/src/config.js"
+    
+    "db-migration-gen": "sequelize-cli migration:generate --migrations-path ./libs/database/src/migrations/ --name schema",
+    "db-migration:run": "yarn sequelize-cli db:migrate --config ./libs/database/src/migration-config.js --migrations-path ./libs/database/src/migrations/",
+    "db-migration:undo": "yarn sequelize-cli db:migrate:undo --config ./libs/database/src/migration-config.js --migrations-path ./libs/database/src/migrations/",
+    "db-seed-gen": "sequelize-cli seed:generate --seeders-path ./libs/database/src/seeders/ --name seeder",
+    "db-seed:run": "yarn sequelize-cli db:seed:all --config ./libs/database/src/migration-config.js --seeders-path ./libs/database/src/seeders/",
+    "db-seed:undo": "yarn sequelize-cli db:seed:undo --config ./libs/database/src/migration-config.js--seeders-path ./libs/database/src/seeders/"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

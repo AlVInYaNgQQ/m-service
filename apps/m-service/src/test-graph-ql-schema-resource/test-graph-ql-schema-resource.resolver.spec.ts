@@ -1,19 +1,24 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { TestGraphQlSchemaResourceResolver } from './test-graph-ql-schema-resource.resolver';
-import { TestGraphQlSchemaResourceService } from './test-graph-ql-schema-resource.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { TestGraphQlSchemaResourceResolver } from "./test-graph-ql-schema-resource.resolver";
+import { TestGraphQlSchemaResourceService } from "./test-graph-ql-schema-resource.service";
 
-describe('TestGraphQlSchemaResourceResolver', () => {
+describe("TestGraphQlSchemaResourceResolver", () => {
   let resolver: TestGraphQlSchemaResourceResolver;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [TestGraphQlSchemaResourceResolver, TestGraphQlSchemaResourceService],
+      providers: [
+        TestGraphQlSchemaResourceResolver,
+        TestGraphQlSchemaResourceService,
+      ],
     }).compile();
 
-    resolver = module.get<TestGraphQlSchemaResourceResolver>(TestGraphQlSchemaResourceResolver);
+    resolver = module.get<TestGraphQlSchemaResourceResolver>(
+      TestGraphQlSchemaResourceResolver,
+    );
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(resolver).toBeDefined();
   });
 });
