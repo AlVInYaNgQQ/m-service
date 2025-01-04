@@ -1,2 +1,7 @@
 .vscode
+.env
 node_modules
+dist
+yarn sequelize-cli migration:generate --migrations-path ./libs/database/src/migrations/ --name migration
+
+yarn sequelize-cli db:migrate --migrations-path ./libs/database/src/migrations/
