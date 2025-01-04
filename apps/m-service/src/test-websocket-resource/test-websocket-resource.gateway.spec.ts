@@ -1,8 +1,8 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { TestWebsocketResourceGateway } from "./test-websocket-resource.gateway";
-import { TestWebsocketResourceService } from "./test-websocket-resource.service";
+import { Test, TestingModule } from '@nestjs/testing';
+import { TestWebsocketResourceGateway } from './test-websocket-resource.gateway';
+import { TestWebsocketResourceService } from './test-websocket-resource.service';
 
-describe("TestWebsocketResourceGateway", () => {
+describe('TestWebsocketResourceGateway', () => {
   let gateway: TestWebsocketResourceGateway;
 
   beforeEach(async () => {
@@ -15,7 +15,7 @@ describe("TestWebsocketResourceGateway", () => {
     );
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(gateway).toBeDefined();
   });
 });

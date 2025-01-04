@@ -1,6 +1,6 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class DatabaseService {}
 
-console.log("");
+console.log('');

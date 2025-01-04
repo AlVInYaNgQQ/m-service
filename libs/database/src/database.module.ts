@@ -1,7 +1,7 @@
-import { DynamicModule, Module } from "@nestjs/common";
-import { DatabaseService } from "./database.service";
-import { Sequelize, SequelizeOptions } from "sequelize-typescript";
-import { dbConfigs } from "./db.config";
+import { DynamicModule, Module } from '@nestjs/common';
+import { DatabaseService } from './database.service';
+import { Sequelize, SequelizeOptions } from 'sequelize-typescript';
+import { dbConfigs } from './db.config';
 
 @Module({
   providers: [DatabaseService],
@@ -15,7 +15,7 @@ export class DatabaseModule {
 
     const providers = [
       {
-        provide: "SEQUELIZE",
+        provide: 'SEQUELIZE',
         useFactory: async () => new Sequelize(dbConfig),
       },
     ];
