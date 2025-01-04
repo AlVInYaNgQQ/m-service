@@ -15,7 +15,7 @@ export class DatabaseModule {
 
     const providers = [
       {
-        provide: 'SEQUELIZE',
+        provide: config.db_connection_name,
         useFactory: async () => new Sequelize(dbConfig),
       },
     ];
