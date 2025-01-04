@@ -1,13 +1,13 @@
-import { Injectable } from "@nestjs/common";
-import { CreateTestGraphQlSchemaResourceInput } from "./dto/create-test-graph-ql-schema-resource.input";
-import { UpdateTestGraphQlSchemaResourceInput } from "./dto/update-test-graph-ql-schema-resource.input";
+import { Injectable } from '@nestjs/common';
+import { CreateTestGraphQlSchemaResourceInput } from './dto/create-test-graph-ql-schema-resource.input';
+import { UpdateTestGraphQlSchemaResourceInput } from './dto/update-test-graph-ql-schema-resource.input';
 
 @Injectable()
 export class TestGraphQlSchemaResourceService {
   create(
     createTestGraphQlSchemaResourceInput: CreateTestGraphQlSchemaResourceInput,
   ) {
-    return "This action adds a new testGraphQlSchemaResource";
+    return 'This action adds a new testGraphQlSchemaResource';
   }
 
   findAll() {

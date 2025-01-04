@@ -1,7 +1,7 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { TestGraphQlCodeResourceService } from "./test-graph-ql-code-resource.service";
+import { Test, TestingModule } from '@nestjs/testing';
+import { TestGraphQlCodeResourceService } from './test-graph-ql-code-resource.service';
 
-describe("TestGraphQlCodeResourceService", () => {
+describe('TestGraphQlCodeResourceService', () => {
   let service: TestGraphQlCodeResourceService;
 
   beforeEach(async () => {
@@ -14,7 +14,7 @@ describe("TestGraphQlCodeResourceService", () => {
     );
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(service).toBeDefined();
   });
 });

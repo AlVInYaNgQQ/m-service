@@ -1,17 +1,17 @@
-import { Resolver, Query, Mutation, Args } from "@nestjs/graphql";
-import { TestGraphQlSchemaResourceService } from "./test-graph-ql-schema-resource.service";
-import { CreateTestGraphQlSchemaResourceInput } from "./dto/create-test-graph-ql-schema-resource.input";
-import { UpdateTestGraphQlSchemaResourceInput } from "./dto/update-test-graph-ql-schema-resource.input";
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { TestGraphQlSchemaResourceService } from './test-graph-ql-schema-resource.service';
+import { CreateTestGraphQlSchemaResourceInput } from './dto/create-test-graph-ql-schema-resource.input';
+import { UpdateTestGraphQlSchemaResourceInput } from './dto/update-test-graph-ql-schema-resource.input';
 
-@Resolver("TestGraphQlSchemaResource")
+@Resolver('TestGraphQlSchemaResource')
 export class TestGraphQlSchemaResourceResolver {
   constructor(
     private readonly testGraphQlSchemaResourceService: TestGraphQlSchemaResourceService,
   ) {}
 
-  @Mutation("createTestGraphQlSchemaResource")
+  @Mutation('createTestGraphQlSchemaResource')
   create(
-    @Args("createTestGraphQlSchemaResourceInput")
+    @Args('createTestGraphQlSchemaResourceInput')
     createTestGraphQlSchemaResourceInput: CreateTestGraphQlSchemaResourceInput,
   ) {
     return this.testGraphQlSchemaResourceService.create(
@@ -19,19 +19,19 @@ export class TestGraphQlSchemaResourceResolver {
     );
   }
 
-  @Query("testGraphQlSchemaResource")
+  @Query('testGraphQlSchemaResource')
   findAll() {
     return this.testGraphQlSchemaResourceService.findAll();
   }
 
-  @Query("testGraphQlSchemaResource")
-  findOne(@Args("id") id: number) {
+  @Query('testGraphQlSchemaResource')
+  findOne(@Args('id') id: number) {
     return this.testGraphQlSchemaResourceService.findOne(id);
   }
 
-  @Mutation("updateTestGraphQlSchemaResource")
+  @Mutation('updateTestGraphQlSchemaResource')
   update(
-    @Args("updateTestGraphQlSchemaResourceInput")
+    @Args('updateTestGraphQlSchemaResourceInput')
     updateTestGraphQlSchemaResourceInput: UpdateTestGraphQlSchemaResourceInput,
   ) {
     return this.testGraphQlSchemaResourceService.update(
@@ -40,8 +40,8 @@ export class TestGraphQlSchemaResourceResolver {
     );
   }
 
-  @Mutation("removeTestGraphQlSchemaResource")
-  remove(@Args("id") id: number) {
+  @Mutation('removeTestGraphQlSchemaResource')
+  remove(@Args('id') id: number) {
     return this.testGraphQlSchemaResourceService.remove(id);
   }
 }
