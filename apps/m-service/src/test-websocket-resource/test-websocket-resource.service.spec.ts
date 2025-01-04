@@ -1,7 +1,7 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { TestWebsocketResourceService } from './test-websocket-resource.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { TestWebsocketResourceService } from "./test-websocket-resource.service";
 
-describe('TestWebsocketResourceService', () => {
+describe("TestWebsocketResourceService", () => {
   let service: TestWebsocketResourceService;
 
   beforeEach(async () => {
@@ -9,10 +9,12 @@ describe('TestWebsocketResourceService', () => {
       providers: [TestWebsocketResourceService],
     }).compile();
 
-    service = module.get<TestWebsocketResourceService>(TestWebsocketResourceService);
+    service = module.get<TestWebsocketResourceService>(
+      TestWebsocketResourceService,
+    );
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(service).toBeDefined();
   });
 });

@@ -1,8 +1,8 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { TestRestapiResourceController } from './test-restapi-resource.controller';
-import { TestRestapiResourceService } from './test-restapi-resource.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { TestRestapiResourceController } from "./test-restapi-resource.controller";
+import { TestRestapiResourceService } from "./test-restapi-resource.service";
 
-describe('TestRestapiResourceController', () => {
+describe("TestRestapiResourceController", () => {
   let controller: TestRestapiResourceController;
 
   beforeEach(async () => {
@@ -11,10 +11,12 @@ describe('TestRestapiResourceController', () => {
       providers: [TestRestapiResourceService],
     }).compile();
 
-    controller = module.get<TestRestapiResourceController>(TestRestapiResourceController);
+    controller = module.get<TestRestapiResourceController>(
+      TestRestapiResourceController,
+    );
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(controller).toBeDefined();
   });
 });

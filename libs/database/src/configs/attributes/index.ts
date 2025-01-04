@@ -1,1 +1,1 @@
-export * from './commodity-attribute.interface';
+export * from "./commodity-attribute.interface";

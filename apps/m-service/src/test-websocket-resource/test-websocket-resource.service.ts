@@ -1,11 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { CreateTestWebsocketResourceDto } from './dto/create-test-websocket-resource.dto';
-import { UpdateTestWebsocketResourceDto } from './dto/update-test-websocket-resource.dto';
+import { Injectable } from "@nestjs/common";
+import { CreateTestWebsocketResourceDto } from "./dto/create-test-websocket-resource.dto";
+import { UpdateTestWebsocketResourceDto } from "./dto/update-test-websocket-resource.dto";
 
 @Injectable()
 export class TestWebsocketResourceService {
   create(createTestWebsocketResourceDto: CreateTestWebsocketResourceDto) {
-    return 'This action adds a new testWebsocketResource';
+    return "This action adds a new testWebsocketResource";
   }
 
   findAll() {
@@ -16,7 +16,10 @@ export class TestWebsocketResourceService {
     return `This action returns a #${id} testWebsocketResource`;
   }
 
-  update(id: number, updateTestWebsocketResourceDto: UpdateTestWebsocketResourceDto) {
+  update(
+    id: number,
+    updateTestWebsocketResourceDto: UpdateTestWebsocketResourceDto,
+  ) {
     return `This action updates a #${id} testWebsocketResource`;
   }
 

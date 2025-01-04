@@ -1,5 +1,8 @@
-import { SHOPPING_MALL, SHOPPING_MALL_DB_CONFIG } from "./configs/config";
+import {
+  DB_CONNECTION_NAME_SHOPPING_MALL,
+  SHOPPING_MALL_DB_CONFIG,
+} from "./configs/config";
 
 export const dbConfigs = {
-    [SHOPPING_MALL]: SHOPPING_MALL_DB_CONFIG,
+  [DB_CONNECTION_NAME_SHOPPING_MALL]: SHOPPING_MALL_DB_CONFIG,
 };
