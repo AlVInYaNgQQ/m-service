@@ -1,0 +1,24 @@
+type TestGraphQlSchemaResource {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateTestGraphQlSchemaResourceInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateTestGraphQlSchemaResourceInput {
+  id: Int!
+}
+
+type Query {
+  testGraphQlSchemaResource: [TestGraphQlSchemaResource]!
+  testGraphQlSchemaResource(id: Int!): TestGraphQlSchemaResource
+}
+
+type Mutation {
+  createTestGraphQlSchemaResource(createTestGraphQlSchemaResourceInput: CreateTestGraphQlSchemaResourceInput!): TestGraphQlSchemaResource!
+  updateTestGraphQlSchemaResource(updateTestGraphQlSchemaResourceInput: UpdateTestGraphQlSchemaResourceInput!): TestGraphQlSchemaResource!
+  removeTestGraphQlSchemaResource(id: Int!): TestGraphQlSchemaResource
+}
