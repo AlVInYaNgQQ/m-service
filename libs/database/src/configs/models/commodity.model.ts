@@ -6,7 +6,9 @@ import { CommodityAttribute } from '../attributes';
   createdAt: 'create_time',
   updatedAt: 'modify_time',
 })
-export class CommodityModel extends Model implements CommodityAttribute {
+export class CommodityModel
+  extends Model<CommodityAttribute>
+  implements CommodityAttribute {
   @Column({
     primaryKey: true,
     unique: true,

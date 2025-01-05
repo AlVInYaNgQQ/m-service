@@ -15,10 +15,7 @@ import { PaymentModel } from './payment.model';
   createdAt: 'create_time',
   updatedAt: 'modify_time',
 })
-export class ShoppingInvoiceModel
-  extends Model
-  implements ShoppingInvoiceAttribute
-{
+export class ShoppingInvoiceModel extends Model<ShoppingInvoiceAttribute> {
   @Column({
     primaryKey: true,
     unique: true,
@@ -32,7 +29,7 @@ export class ShoppingInvoiceModel
   })
   shopping_history_id: string;
 
-  @ForeignKey(() => PaymentModel)
+  // @ForeignKey(() => PaymentModel)
   @Column({
     type: DataType.UUID,
   })
@@ -51,6 +48,6 @@ export class ShoppingInvoiceModel
   @BelongsTo(() => ShoppingHistoryModel)
   shoppingHistory: ShoppingHistoryModel;
 
-  @BelongsTo(() => PaymentModel)
-  payment: PaymentModel;
+  // @BelongsTo(() => PaymentModel)
+  // payment: PaymentModel;
 }

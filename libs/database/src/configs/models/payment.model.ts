@@ -6,7 +6,7 @@ import { PaymentAttribute } from '../attributes';
   createdAt: 'create_time',
   updatedAt: 'modify_time',
 })
-export class PaymentModel extends Model implements PaymentAttribute {
+export class PaymentModel extends Model<PaymentAttribute> {
   @Column({
     primaryKey: true,
     unique: true,

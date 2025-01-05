@@ -7,10 +7,7 @@ import { ShoppingInvoiceModel } from './shopping-invoice.model';
   createdAt: 'create_time',
   updatedAt: 'modify_time',
 })
-export class ShoppingHistoryModel
-  extends Model
-  implements ShoppingHistoryAttribute
-{
+export class ShoppingHistoryModel extends Model<ShoppingHistoryAttribute> {
   @Column({
     primaryKey: true,
     unique: true,

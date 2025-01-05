@@ -14,7 +14,7 @@ import { ShoppingCartAttribute } from '../attributes';
   createdAt: 'create_time',
   updatedAt: 'modify_time',
 })
-export class ShoppingCartModel extends Model implements ShoppingCartAttribute {
+export class ShoppingCartModel extends Model<ShoppingCartAttribute> {
   @Column({
     primaryKey: true,
     unique: true,
