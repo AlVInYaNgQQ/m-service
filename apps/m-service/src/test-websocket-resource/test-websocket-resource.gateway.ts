@@ -2,10 +2,10 @@ import {
   WebSocketGateway,
   SubscribeMessage,
   MessageBody,
-} from "@nestjs/websockets";
-import { TestWebsocketResourceService } from "./test-websocket-resource.service";
-import { CreateTestWebsocketResourceDto } from "./dto/create-test-websocket-resource.dto";
-import { UpdateTestWebsocketResourceDto } from "./dto/update-test-websocket-resource.dto";
+} from '@nestjs/websockets';
+import { TestWebsocketResourceService } from './test-websocket-resource.service';
+import { CreateTestWebsocketResourceDto } from './dto/create-test-websocket-resource.dto';
+import { UpdateTestWebsocketResourceDto } from './dto/update-test-websocket-resource.dto';
 
 @WebSocketGateway()
 export class TestWebsocketResourceGateway {
@@ -13,7 +13,7 @@ export class TestWebsocketResourceGateway {
     private readonly testWebsocketResourceService: TestWebsocketResourceService,
   ) {}
 
-  @SubscribeMessage("createTestWebsocketResource")
+  @SubscribeMessage('createTestWebsocketResource')
   create(
     @MessageBody()
     createTestWebsocketResourceDto: CreateTestWebsocketResourceDto,
@@ -23,17 +23,17 @@ export class TestWebsocketResourceGateway {
     );
   }
 
-  @SubscribeMessage("findAllTestWebsocketResource")
+  @SubscribeMessage('findAllTestWebsocketResource')
   findAll() {
     return this.testWebsocketResourceService.findAll();
   }
 
-  @SubscribeMessage("findOneTestWebsocketResource")
+  @SubscribeMessage('findOneTestWebsocketResource')
   findOne(@MessageBody() id: number) {
     return this.testWebsocketResourceService.findOne(id);
   }
 
-  @SubscribeMessage("updateTestWebsocketResource")
+  @SubscribeMessage('updateTestWebsocketResource')
   update(
     @MessageBody()
     updateTestWebsocketResourceDto: UpdateTestWebsocketResourceDto,
@@ -44,7 +44,7 @@ export class TestWebsocketResourceGateway {
     );
   }
 
-  @SubscribeMessage("removeTestWebsocketResource")
+  @SubscribeMessage('removeTestWebsocketResource')
   remove(@MessageBody() id: number) {
     return this.testWebsocketResourceService.remove(id);
   }

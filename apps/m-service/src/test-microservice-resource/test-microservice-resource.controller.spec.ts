@@ -1,8 +1,8 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { TestMicroserviceResourceController } from "./test-microservice-resource.controller";
-import { TestMicroserviceResourceService } from "./test-microservice-resource.service";
+import { Test, TestingModule } from '@nestjs/testing';
+import { TestMicroserviceResourceController } from './test-microservice-resource.controller';
+import { TestMicroserviceResourceService } from './test-microservice-resource.service';
 
-describe("TestMicroserviceResourceController", () => {
+describe('TestMicroserviceResourceController', () => {
   let controller: TestMicroserviceResourceController;
 
   beforeEach(async () => {
@@ -16,7 +16,7 @@ describe("TestMicroserviceResourceController", () => {
     );
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(controller).toBeDefined();
   });
 });

@@ -1,7 +1,7 @@
 import {
   DB_CONNECTION_NAME_SHOPPING_MALL,
   SHOPPING_MALL_DB_CONFIG,
-} from "./configs/config";
+} from './configs/config';
 
 export const dbConfigs = {
   [DB_CONNECTION_NAME_SHOPPING_MALL]: SHOPPING_MALL_DB_CONFIG,

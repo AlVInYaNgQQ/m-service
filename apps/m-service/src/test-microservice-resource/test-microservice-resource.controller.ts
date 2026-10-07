@@ -1,8 +1,8 @@
-import { Controller } from "@nestjs/common";
-import { MessagePattern, Payload } from "@nestjs/microservices";
-import { TestMicroserviceResourceService } from "./test-microservice-resource.service";
-import { CreateTestMicroserviceResourceDto } from "./dto/create-test-microservice-resource.dto";
-import { UpdateTestMicroserviceResourceDto } from "./dto/update-test-microservice-resource.dto";
+import { Controller } from '@nestjs/common';
+import { MessagePattern, Payload } from '@nestjs/microservices';
+import { TestMicroserviceResourceService } from './test-microservice-resource.service';
+import { CreateTestMicroserviceResourceDto } from './dto/create-test-microservice-resource.dto';
+import { UpdateTestMicroserviceResourceDto } from './dto/update-test-microservice-resource.dto';
 
 @Controller()
 export class TestMicroserviceResourceController {
@@ -10,7 +10,7 @@ export class TestMicroserviceResourceController {
     private readonly testMicroserviceResourceService: TestMicroserviceResourceService,
   ) {}
 
-  @MessagePattern("createTestMicroserviceResource")
+  @MessagePattern('createTestMicroserviceResource')
   create(
     @Payload()
     createTestMicroserviceResourceDto: CreateTestMicroserviceResourceDto,
@@ -20,17 +20,17 @@ export class TestMicroserviceResourceController {
     );
   }
 
-  @MessagePattern("findAllTestMicroserviceResource")
+  @MessagePattern('findAllTestMicroserviceResource')
   findAll() {
     return this.testMicroserviceResourceService.findAll();
   }
 
-  @MessagePattern("findOneTestMicroserviceResource")
+  @MessagePattern('findOneTestMicroserviceResource')
   findOne(@Payload() id: number) {
     return this.testMicroserviceResourceService.findOne(id);
   }
 
-  @MessagePattern("updateTestMicroserviceResource")
+  @MessagePattern('updateTestMicroserviceResource')
   update(
     @Payload()
     updateTestMicroserviceResourceDto: UpdateTestMicroserviceResourceDto,
@@ -41,7 +41,7 @@ export class TestMicroserviceResourceController {
     );
   }
 
-  @MessagePattern("removeTestMicroserviceResource")
+  @MessagePattern('removeTestMicroserviceResource')
   remove(@Payload() id: number) {
     return this.testMicroserviceResourceService.remove(id);
   }

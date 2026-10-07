@@ -1,11 +1,11 @@
-import { Injectable } from "@nestjs/common";
-import { CreateTestMicroserviceResourceDto } from "./dto/create-test-microservice-resource.dto";
-import { UpdateTestMicroserviceResourceDto } from "./dto/update-test-microservice-resource.dto";
+import { Injectable } from '@nestjs/common';
+import { CreateTestMicroserviceResourceDto } from './dto/create-test-microservice-resource.dto';
+import { UpdateTestMicroserviceResourceDto } from './dto/update-test-microservice-resource.dto';
 
 @Injectable()
 export class TestMicroserviceResourceService {
   create(createTestMicroserviceResourceDto: CreateTestMicroserviceResourceDto) {
-    return "This action adds a new testMicroserviceResource";
+    return 'This action adds a new testMicroserviceResource';
   }
 
   findAll() {

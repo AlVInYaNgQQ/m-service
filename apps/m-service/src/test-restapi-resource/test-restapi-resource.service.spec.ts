@@ -1,7 +1,7 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { TestRestapiResourceService } from "./test-restapi-resource.service";
+import { Test, TestingModule } from '@nestjs/testing';
+import { TestRestapiResourceService } from './test-restapi-resource.service';
 
-describe("TestRestapiResourceService", () => {
+describe('TestRestapiResourceService', () => {
   let service: TestRestapiResourceService;
 
   beforeEach(async () => {
@@ -14,7 +14,7 @@ describe("TestRestapiResourceService", () => {
     );
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(service).toBeDefined();
   });
 });

@@ -19,6 +19,15 @@
         "tsConfigPath": "apps/m-service/tsconfig.app.json"
       }
     },
+    "shopping-page": {
+      "type": "application",
+      "root": "apps/shopping-page",
+      "entryFile": "main",
+      "sourceRoot": "apps/shopping-page/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/shopping-page/tsconfig.app.json"
+      }
+    },
     "test": {
       "type": "application",
       "root": "apps/test",
